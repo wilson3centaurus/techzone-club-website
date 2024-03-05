@@ -67,13 +67,6 @@ nav a {
     color: #b86f6f;
 }
 
-nav a:hover {
-    color: #ff0000;
- }
-
-.btn:hover {
-    color: #ff0000;
- }
 
 section {
     padding: 50px;
