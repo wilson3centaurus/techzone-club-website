@@ -28,18 +28,12 @@ body {
 header {
     position: fixed;
     display: flex;
-    justify-content:flex-end;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 100vw;
+    justify-content:space-between;
+    width: 100%;
     background-color: #3d0f0f;
     font-size: 20px;
-    
     color: #fff;
-    padding: 20px;
+    padding: 5px;
     z-index: 1;
 }
 
@@ -50,11 +44,14 @@ nav {
 }
 
 .logo {
+    display: flex;
+    flex-direction: row;
+}
+.logo p {
     font-size: 24px;
     font-weight: bold;
     display: flex;
-    flex-direction: row;
-    justify-self:flex-end;
+    justify-self:flex-start;
 }
 
 nav ul {
@@ -72,13 +69,13 @@ nav a {
     color: white;
 }
 
-
 section {
     padding: 50px;
     text-align: center;
 }
 
-.hero-btn {
+.hero-btn-learn,
+.hero-btn-join {
     background-color: #270303;
     color: #fff;
     padding: 10px 20px;
@@ -93,6 +90,17 @@ section h2 {
     margin-bottom: 20px;
 }
 
+.join-us {
+  background-color: #7c0303;
+  color: #fff;
+  border: 2px black solid;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  align-self: center;
+  padding: 5px 10px;
+}
 section p {
     font-size: 18px;
     line-height: 1.5;
@@ -120,23 +128,35 @@ footer {
     background-size: cover;
     position: relative;
 }
-  @media (min-width: 1024px) {
-    #home {
-      background-attachment: fixed;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #home {
-      height: 100vh;
-    }
-  }
-  @media (max-height: 500px) {
-    #home {
-      height: 120vh;
-    }
-  }
 
+#home h1 {
+  padding-top: 100px;
+  font-size: 55px;
+}
+#home p {
+  font-size: 26px;
+  margin-top: -30px;
+}
+#home span {
+  font-size: 30px;
+  display: block;
+  margin-top: 20px;
+}
+#home a {
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 12px 16px;
+}
+.hero-btn-join {
+  background-color: transparent;
+  border: 2px #461010 solid;
+  color: #461010;
+
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
 
 #about {
     width: 100%;
