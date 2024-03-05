@@ -1,0 +1,267 @@
+:root {
+    --logo-text: #1ebc73;
+
+    --awards-background: #212121;
+    --awards-text: #fefefe;
+
+    --contacts-background: #212121;
+    --contacts-text: #fefefe;
+
+    --account-background: #121212;
+}
+
+/* screens */
+@media screen and (min-width: 800px) {
+    .formatting-separator {
+        height: 100px;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #dd000054;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100vw;
+    background-color: #3d0f0f;
+    color: #fff;
+    padding: 20px;
+    z-index: 1;
+}
+
+
+
+
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #270303;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.event {
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #461010;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
+#home {
+    width: 100%;
+    height: 100vh;
+    background: url("image1.jpg") top left;
+    background-size: cover;
+    position: relative;
+}
+  @media (min-width: 1024px) {
+    #home {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #home {
+      height: 100vh;
+    }
+  }
+  @media (max-height: 500px) {
+    #home {
+      height: 120vh;
+    }
+  }
+
+
+#about {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+#events {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+#projects {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+#team {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+#resources {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.projects {
+    background: white;
+    padding: 3rem 0;
+
+    h2,
+    h2 span {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: bold;
+    }
+
+    .project-row {
+        display: flex;
+        margin-bottom: 3rem;
+
+        .project-left {
+        width: 50%;
+        margin-right: 2rem;
+        img {
+            width: 100%;
+            border: 1px solid lightgray;
+        }
+        }
+        .project-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        .tech-stack-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            margin-top: 1rem;
+
+            p {
+            margin-right: 1rem;
+            }
+
+            li {
+            margin-right: 20px;
+            font-size: 1.5rem;
+            }
+        }
+
+        .project-links {
+            margin-top: 1rem;
+        }
+        }
+
+        #webscraper {
+        background-image: url("../img/top10songs.JPG");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        -webkit-transition: background-image 0.2s ease-in-out;
+        transition: background-image 0.2s ease-in-out;
+        }
+
+        #webscraper:hover {
+        background-image: url("../img/top10songs.gif");
+        }
+    }
+}
+  
+  @media screen and (max-width: 860px) {
+    .projects {
+      .project-row {
+        display: flex;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        .project-left {
+          width: 100%;
+        }
+        .project-right {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .project-left {
+      min-height: 200px;
+    }
+  }
+  
+  @media screen and (min-width: 501px) and (max-width: 700px) {
+    .project-left {
+      min-height: 300px;
+    }
+  }
+  
+  @media screen and (min-width: 701px) and (max-width: 859px) {
+    .project-left {
+      min-height: 350px;
+    }
+  }
+  
+
+
+
+
+
+
+
