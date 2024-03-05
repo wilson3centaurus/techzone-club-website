@@ -26,11 +26,10 @@ body {
     background-color: #dd000054;
 }
 
-nav {
+header {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -43,9 +42,38 @@ nav {
     z-index: 1;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
 
+nav ul {
+    list-style: none;
+    display: flex;
+}
 
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #b86f6f;
+}
+
+nav a:hover {
+    color: #ff0000;
+ }
+
+.btn:hover {
+    color: #ff0000;
+ }
 
 section {
     padding: 50px;
