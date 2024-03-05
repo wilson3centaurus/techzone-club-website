@@ -17,9 +17,8 @@
     }
 }
 
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -29,7 +28,7 @@ body {
 header {
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -37,6 +36,8 @@ header {
     padding-right: 10%;
     width: 100vw;
     background-color: #3d0f0f;
+    font-size: 20px;
+    
     color: #fff;
     padding: 20px;
     z-index: 1;
@@ -51,11 +52,15 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-self:flex-end;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -64,7 +69,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #b86f6f;
+    color: white;
 }
 
 
@@ -73,7 +78,7 @@ section {
     text-align: center;
 }
 
-.btn {
+.hero-btn {
     background-color: #270303;
     color: #fff;
     padding: 10px 20px;
