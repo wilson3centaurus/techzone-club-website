@@ -79,8 +79,8 @@ section {
     text-align: center;
 }
 
-.hero-btn-learn,
-.hero-btn-join {
+.home-btn-learn,
+.home-btn-join {
     background-color: rgb(133, 31, 31);
     color: #fff;
     padding: 10px 20px;
@@ -144,6 +144,7 @@ footer {
   padding-top: 100px;
   font-size: 55px;
   color: #F9FAFB;
+  font-family: Madimi One;
 }
 #home p {
   font-size: 26px;
@@ -202,6 +203,19 @@ footer {
   align-content: center;
   text-decoration: none;
   margin-left: -30px;
+}
+.author-text{
+  font-family: Italianno;
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
 }
 /*--------------------------------------------------------------
 # About Section
