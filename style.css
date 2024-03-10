@@ -26,7 +26,6 @@ body {
 }
 
 header {
-    position: fixed;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -36,6 +35,7 @@ header {
     color: #fff;
     padding: 10px;
     z-index: 1;
+    position: fixed;
 }
 
 nav {
@@ -134,10 +134,11 @@ footer {
 --------------------------------------------------------------*/
 #home {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background-size: cover;
     position: relative;
-    transition: background 0.5s ease; 
+    transition: background 0.10s ease; 
+    margin-top: 60px;
 }
 
 #home h1 {
@@ -172,10 +173,10 @@ footer {
 }
 .nav-button1,
 .nav-button2 {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(50%);
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.5); 
   border: none;
   border-radius: 4px;
   color: #333;
@@ -185,6 +186,7 @@ footer {
   transition: background 0.3s ease;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 .nav-button1 {
   left: -40px;
@@ -203,7 +205,7 @@ footer {
   text-decoration: none;
   margin-left: -30px;
 }
-.author-text{
+.motto-text{
   font-family: Italianno;
   font-size: 30px;
   position: absolute;
@@ -235,9 +237,23 @@ footer {
   border-radius: 50px;
 }
 #about p {
-  font-size: 18px; /* Adjusted font size for better readability */
-  line-height: 1.5; /* Added line-height for improved spacing */
-  margin-bottom: 20px; /* Added bottom margin for better separation between paragraphs */
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #212121;
+}
+.know-more a {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #37b64285;
+  color:white;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 8px;
+  text-decoration: none;
+}
+.know-more:hover a {
+  background-color: #ff000056;
 }
 
 #events {
