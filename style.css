@@ -31,7 +31,7 @@ header {
     justify-content:space-between;
     align-items: center;
     width: 100%;
-    background-color: rgb(151, 31, 31);
+    background-color: #971f1f;
     font-size: 18px;
     color: #fff;
     padding: 10px;
@@ -187,11 +187,11 @@ footer {
   justify-content: center;
 }
 .nav-button1 {
-  left: -40px; /* Adjust the left distance as needed */
+  left: -40px;
 }
 
 .nav-button2 {
-  right: 60px; /* Adjust the right distance as needed */
+  right: 60px;
 }
 
 .nav-button:hover {
