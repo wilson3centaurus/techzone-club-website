@@ -25,5 +25,5 @@ function nextImage() {
     changeBackground();
 }
 
-setInterval(changeBackground, 3000);
+setInterval(changeBackground, 6000);
 
