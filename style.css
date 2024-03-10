@@ -1,13 +1,5 @@
-:root {
-    --logo-text: #1ebc73;
-
-    --awards-background: #212121;
-    --awards-text: #fefefe;
-
-    --contacts-background: #212121;
-    --contacts-text: #fefefe;
-
-    --account-background: #121212;
+* {
+  scroll-behavior: smooth;
 }
 
 /* screens */
@@ -174,7 +166,7 @@ footer {
 }
 .nav-button1,
 .nav-button2 {
-  position: fixed;
+  position: absolute;
   top: 50%;
   transform: translateY(50%);
   background: rgba(255, 255, 255, 0.5); 
@@ -190,11 +182,11 @@ footer {
   z-index: 2;
 }
 .nav-button1 {
-  left: 10px;
+  left: -40px;
 }
 
 .nav-button2 {
-  right: 10px;
+  right: 60px;
 }
 
 .nav-button:hover {
@@ -255,6 +247,16 @@ footer {
 }
 .know-more:hover a {
   background-color: #ff000056;
+}
+/*--------------------------------------------------------------
+# Wavy Boarder
+--------------------------------------------------------------*/
+.wavy-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  transform: translateY(2px);
+  height: 120px;
 }
 /*--------------------------------------------------------------
 # Events Section
@@ -346,8 +348,8 @@ strong {
   flex-wrap: wrap;
   align-content: flex-start;
 }
+/* Add your existing styles here */
 
-/* Modals */
 .modal {
   display: none;
   position: fixed;
@@ -358,20 +360,14 @@ strong {
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
+
 .modal-content {
   max-width: 80%;
   max-height: 80%;
   margin: auto;
   display: block;
-}
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
 }
 
 /*--------------------------------------------------------------

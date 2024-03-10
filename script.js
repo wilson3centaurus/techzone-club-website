@@ -1,4 +1,4 @@
-
+// Home background slideshow 
 const slideshowImages = [
     'images/background/background1.jpg',
     'images/background/background2.jpg',
@@ -27,3 +27,29 @@ function nextImage() {
 
 setInterval(changeBackground, 6000);
 
+
+// Modals functionsality
+
+function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    modal.style.display = 'flex';
+    modalImage.src = imageSrc;
+  }
+  
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+  }
+  
+  const learnMoreButtons = document.querySelectorAll('.reserve-button');
+  learnMoreButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      const imageSrc = button.closest('.event-card').querySelector('.event-image').src;
+      openModal(imageSrc);
+      event.stopPropagation();
+    });
+  });
+  
+  
