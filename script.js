@@ -53,3 +53,25 @@ function openModal(imageSrc) {
   });
   
   
+const imageSources = [
+   'images/_452360.jpg',
+   'images/arduino.png',
+   'images/web-event.webp',
+];
+
+let currentIndex = 0;
+
+function updateImage() {
+    const imageElement = document.querySelector('.project-image');
+    imageElement.src = imageSources[currentIndex];
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+    updateImage();
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % imageSources.length;
+    updateImage();
+}
