@@ -431,6 +431,8 @@ strong {
 .prev-image,
 .next-image {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.5); 
   border: none;
   border-radius: 4px;
@@ -439,15 +441,16 @@ strong {
   padding: 9px 4px;
   cursor: pointer;
   transition: background 0.3s ease;
+  z-index: 1;
 }
 .prev-image {
-  left: 90px;
-  top:420px;
+  left: 10px;
+  top:200px;
 }
 
 .next-image {
-  right: 730px;
-  top: 420px;
+  right: 30px;
+  top: 200px;
 }
 .project-details {
   padding: 1.5rem;
@@ -510,6 +513,9 @@ strong {
 .left-side {
   flex: 1;
   padding-right: 16px;
+  width: 192px;
+  height: 396px;
+  position: relative;
 }
 
 .api-header {
@@ -520,9 +526,10 @@ strong {
   margin-bottom: 40px;
 }
 .project-image {
-  width: 600px;
-  height:auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border: 1px #cfc1c1 solid;
 }
 /* Right side (project card) */
 .right-side {

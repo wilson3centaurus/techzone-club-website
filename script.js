@@ -59,19 +59,40 @@ const imageSources = [
    'images/web-event.webp',
 ];
 
-let currentIndex = 0;
+// Variables for the first card
+let currentImageIndex1 = 0;
+const slideshowImages1 = ['images/_452360.jpg', 'images/image2.jpg'];
 
-function updateImage() {
-    const imageElement = document.querySelector('.project-image');
-    imageElement.src = imageSources[currentIndex];
+// Variables for the second card
+let currentImageIndex2 = 0;
+const slideshowImages2 = ['images/image2.jpg', 'images/_452360.jpg'];
+
+// Function for the first card
+function changeBackground1() {
+    document.querySelector('.project-image1').src = slideshowImages1[currentImageIndex1];
 }
 
-function prevImage() {
-    currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
-    updateImage();
+// Function for the second card
+function changeBackground2() {
+    document.querySelector('.project-image2').src = slideshowImages2[currentImageIndex2];
 }
 
-function nextImage() {
-    currentIndex = (currentIndex + 1) % imageSources.length;
-    updateImage();
+function prevImage1() {
+    currentImageIndex1 = (currentImageIndex1 - 1 + slideshowImages1.length) % slideshowImages1.length;
+    changeBackground1();
+}
+
+function nextImage1() {
+    currentImageIndex1 = (currentImageIndex1 + 1) % slideshowImages1.length;
+    changeBackground1();
+}
+
+function prevImage2() {
+    currentImageIndex2 = (currentImageIndex2 - 1 + slideshowImages2.length) % slideshowImages2.length;
+    changeBackground2();
+}
+
+function nextImage2() {
+    currentImageIndex2 = (currentImageIndex2 + 1) % slideshowImages2.length;
+    changeBackground2();
 }

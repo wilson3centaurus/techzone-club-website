@@ -1,29 +1,18 @@
-body {
-  background-color: rgb(216, 163, 180);
-}
 
-.project-card {
-  display: flex;
-  margin-bottom: 20px;
+.chefs .member .member-info {
+  position: absolute;
+  bottom: -80px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 20px 0;
+  color: #79603c;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 }
-
-.project-image img {
-  width: 150px; /* Adjust the width as needed */
-  height: auto;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.project-details {
-  flex: 1;
-}
-
-.language-icons {
-  display: flex;
-  gap: 5px; /* Adjust the gap between language icons */
-}
-
-.language-icons img {
-  width: 20px; /* Adjust the width of language icons */
-  height: auto;
+.chefs .member {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
 }
