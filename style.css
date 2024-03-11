@@ -64,7 +64,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(63, 13, 13); /* Change color on hover for better interactivity */
+  color: rgb(63, 13, 13);
 }
 
 section {
@@ -82,7 +82,10 @@ section {
     margin: 10px;
     cursor: pointer;
 }
-
+.home-btn-learn:hover,
+.home-btn-join:hover {
+  opacity: 0.8;
+}
 section h2 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -157,6 +160,9 @@ footer {
   padding: 12px 16px;
   font-weight: bold;
 }
+.admin-login {
+  cursor: pointer;
+}
 .socials {
   margin-top: 30px;
   padding-left: 5px;
@@ -225,18 +231,28 @@ footer {
     position: relative;
 }
 .section-heading {
-  margin-top: 100px;
+  margin-top: 70px;
   display: inline-block;
   background-color: #ff000056;
   color:#720a0a;
   padding: 10px 20px;
   border-radius: 50px;
 }
-#about p {
-  font-size: 18px;
+#about .about {
+  font-size: 17px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: #212121;
+  color: #fff;
+  text-align: justify;
+  max-width: 80%;
+  margin: auto;
+  padding: 0.5rem;
+  background-color: #461010;
+  border-radius: 20px;
+  padding: 30px;
+  padding-top: 90px;
+  margin-top: -50px;
+  
 }
 .know-more a {
   cursor: pointer;
@@ -244,7 +260,7 @@ footer {
   background-color: #37b64285;
   color:white;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 8px;
   text-decoration: none;
 }
@@ -415,8 +431,6 @@ strong {
 .prev-image,
 .next-image {
   position: absolute;
-  top: 50%;
-  transform: translateY(50%);
   background: rgba(255, 255, 255, 0.5); 
   border: none;
   border-radius: 4px;
@@ -425,9 +439,6 @@ strong {
   padding: 9px 4px;
   cursor: pointer;
   transition: background 0.3s ease;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
 }
 .prev-image {
   left: 90px;
@@ -451,7 +462,7 @@ strong {
 }
 .info-item {
   display: flex;
-  align-items: baseline; /* Align items at their baselines */
+  align-items: baseline;
 }
 .info-label {
   font-weight: bold;
