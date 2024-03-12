@@ -233,26 +233,26 @@ footer {
 .section-heading {
   margin-top: 70px;
   display: inline-block;
-  background-color: #ff000056;
-  color:#720a0a;
+  background-color: #461010;
+  color:#fff;
   padding: 10px 20px;
   border-radius: 50px;
 }
 #about .about {
-  font-size: 17px;
+  font-family: Mali, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 19px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: #fff;
+  color: #2e2828;
   text-align: justify;
   max-width: 80%;
   margin: auto;
   padding: 0.5rem;
-  background-color: #461010;
+  background-color: #e66363;
   border-radius: 20px;
   padding: 30px;
-  padding-top: 90px;
+  padding-top: 50px;
   margin-top: -50px;
-  
 }
 .know-more a {
   cursor: pointer;
@@ -260,7 +260,7 @@ footer {
   background-color: #37b64285;
   color:white;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: -7px;
   padding: 8px;
   text-decoration: none;
 }
@@ -296,6 +296,7 @@ footer {
     line-height: 0;
     overflow: hidden;
 }
+
 #events h2 {
   background-color: #ff000048;
   color: white;
@@ -307,7 +308,8 @@ footer {
   font-size: medium;
   margin-top: -5px;
 }
-.events-heading-p::after {
+.events-heading-p::after,
+#team p::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -315,6 +317,10 @@ footer {
   bottom: -5px;
   width: 55%;
   border-bottom: 2px solid #3182ce; 
+}
+#team p::after {
+  border-bottom: 2px solid #87c5ff;
+  width: 5%;
 }
 .event-card {
   display: flex;
@@ -345,7 +351,7 @@ footer {
 }
 .info-item {
   display: flex;
-  align-items: baseline; /* Align items at their baselines */
+  align-items: baseline;
 }
 .info-label {
   font-weight: bold;
@@ -596,18 +602,104 @@ strong {
 .view-button:hover {
   opacity: 0.8;
 }
-
+/*--------------------------------------------------------------
+# Wavy Boarder
+--------------------------------------------------------------*/
+.team-wavy-divider {
+  position: sticky;
+  overflow: hidden;
+}
+.team-wavy-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  transform: translateY(2px);
+  height: auto;
+  fill: #111827f3;
+  z-index: 1;
+}
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
 #team {
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  position: relative;
+  background-color: #111827f3;
+  overflow: hidden;
 }
+#team h2 {
+  color: white;
+}
+
+#team p{
+  position: relative;
+  color: white;
+  font-size: 20px;
+  margin-top: -5px;
+}
+.member-card {
+  width: 16rem;
+  height: auto;
+  background-color: #81a2c5;
+  border: 1px solid rgba(39, 55, 94, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  margin: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+}
+
+.exceutive {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.profile-image {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border: 1px solid rgba(39, 55, 94, 0.9);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member-name {
+  text-align: center;
+  font-size: 23px;
+}
+.member-post {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #4a4d50;
+}
+
+#team .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: -23px;
+}
+
+#team .social-links li {
+  margin-left: 40px;
+}
+
+#team .social-links a img {
+  width: 24px;
+  height: auto;
+}
+
 /*--------------------------------------------------------------
-# Team Section
+# Resources Section
 --------------------------------------------------------------*/
 #resources {
     width: 100%;
