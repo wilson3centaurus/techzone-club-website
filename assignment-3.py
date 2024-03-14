@@ -17,9 +17,13 @@ def calculate_midpoint(coord1, coord2):
 print("Enter coordinates for Town A:")
 town_a_coords = get_coordinates()
 
+print("")
+
 # Code to get coordinates for Town B
 print("Enter coordinates for Town B:")
 town_b_coords = get_coordinates()
+
+print("")
 
 # Task (a): Calculate distance between Town A and Town B
 distance_ab = calculate_distance(town_a_coords, town_b_coords)
