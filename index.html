@@ -171,12 +171,12 @@
                         </div>
                       </div>
                 </div>
-                <!-- Modal -->
-                <div id="imageModal" class="modal" onclick="closeModal()">
-                    <span class="close-modal" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="modalImage" onclick="event.stopPropagation()">
+                <!-- Modal for the events -->
+                <div id="eventModal" class="modal" onclick="closeEventModal()">
+                    <span class="close-modal" onclick="closeEventModal()">X</span>
+                    <img class="modal-content" id="eventModalImage" onclick="event.stopPropagation()">
                 </div>
-            </div>
+                </div>
         </section>
         <!--====== End of Events Section ======-->
 
@@ -489,14 +489,29 @@
                 
             </div>
         </section>
-        <!--====== Gallery Section ======-->
+   <!--====== Gallery Section ======-->
   <section id="gallery">
     <div class="section-content">
         <h2 class="section-heading">Gallery</h2>
-        <div>
+        <div class="gallery-container">
+            <img class="gallery-image" src="images/gallery/image (1).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (2).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (3).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (4).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (5).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (6).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (7).jpg" alt="">
+            <img class="gallery-image" src="images/gallery/image (8).jpg" alt="">
+            
+            <!-- Modal for the gallery -->
+            <div id="imageModal" class="modal">
+                <span class="close-modal" onclick="closeModal()">X</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+            <!--
             <p class="still-in-devpmt"> 
                 ⚠️Section still under development!⚒️
-            </p>
+            </p> -->
         </div>
         
     </div>

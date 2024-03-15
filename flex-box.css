@@ -2,62 +2,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
   margin: 0;
   background-color: #f0f4f8;
+  overflow:scroll;
+  margin: 200PX;
 }
 
-.member-card {
-  width: 16rem;
-  height: 24rem;
-  background-color: #f8fafc;
-  border: 1px solid rgba(39, 55, 94, 0.5);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 1rem;
-  margin: 1rem;
+img {
+  width: 400px;
+  height: 300px;
+  border: 1px lightgreen solid;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-
-.member-card:hover {
+img:hover {
   transform: scale(1.05);
-}
-
-.profile-image {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border: 1px solid rgba(39, 55, 94, 0.9);
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.text-base {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-
-.social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-.social-links li {
-  margin: 0 0.5rem;
-}
-
-.social-links a img {
-  width: 24px;
-  height: auto;
 }
