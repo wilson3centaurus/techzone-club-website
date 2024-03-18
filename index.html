@@ -23,7 +23,7 @@
     <header>
         <div class="logo">
             <a href="#">
-                <img class="logo" src="images/test2.png" alt="Club Logo" width="90px" height="auto">
+                <img class="logo" src="images/msuas.png" alt="Club Logo" width="90px" height="auto">
             </a>
             
         </div>
@@ -54,7 +54,7 @@
                 <h1>Welcome to TechZone Club</h1>
                 <p>Explore the world of technology with us today!</p>
 
-                <a href="#about" class="home-btn-learn">Learn More</a>
+                <a href="#events" class="home-btn-learn">Upcoming Events</a>
                 <a href="https://forms.gle/HP96YjrMbTAWDTiV8" class="home-btn-join" target="_blank">Join Club</a>
                 <div>
                     <a class="social-links" href="techzone-fb" target="_blank" >
@@ -172,8 +172,8 @@
                       </div>
                 </div>
                 <!-- Modal for the events -->
-                <div id="eventModal" class="modal" onclick="closeEventModal()">
-                    <span class="close-modal" onclick="closeEventModal()">X</span>
+                <div class="modal" id="eventModal" onclick="closeEventModal()">
+                    <span class="close-modal" onclick="closeEventModal()">&#10006;</span>
                     <img class="modal-content" id="eventModalImage" onclick="event.stopPropagation()">
                 </div>
                 </div>
@@ -313,6 +313,15 @@
                         <img src="images/image2.jpg" alt="Profile Image" class="profile-image">
                         <h2 class="member-name">Mrs. Ruvinga</h2>
                         <h5 class="member-post">Club Patron</h5>
+                        <!--
+                        <h5 class="areas-of-intrest">Areas of Intrest</h5>
+                        <div class="areas-info">
+                            <div class="name-cover">IOT</div>
+                            <div class="name-cover">AI/ML</div>
+                            <div class="name-cover">Robotics</div>
+                            <div class="name-cover">Blockchain</div>
+                        </div>
+                        -->
                         <ul class="social-links">
                             <li>
                                 <a class="social-links" href="" target="_blank">
@@ -398,7 +407,7 @@
                         </ul>
                     </div>
                     <div class="member-card">
-                        <img src="images/image3.jpg" alt="Profile Image" class="profile-image">
+                        <img src="images/team/wilson.jpg" alt="Profile Image" class="profile-image">
                         <h2 class="member-name">Wilson Sedze</h2>
                         <h5 class="member-post">Projects Director</h5>
                         <ul class="social-links">
@@ -493,27 +502,31 @@
   <section id="gallery">
     <div class="section-content">
         <h2 class="section-heading">Gallery</h2>
-        <div class="gallery-container">
-            <img class="gallery-image" src="images/gallery/image (1).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (2).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (3).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (4).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (5).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (6).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (7).jpg" alt="">
-            <img class="gallery-image" src="images/gallery/image (8).jpg" alt="">
-            
-            <!-- Modal for the gallery -->
-            <div id="imageModal" class="modal">
-                <span class="close-modal" onclick="closeModal()">X</span>
-                <img class="modal-content" id="modalImage">
-            </div>
+        <div class="gallery-container" id="galleryContainer">
+            <img class="event-image" src="images/gallery/image (1).jpg" alt="" width="192" height="256"> 
+            <img class="event-image" src="images/gallery/image (2).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (3).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (4).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (5).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (6).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (7).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (8).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (6).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (7).jpg" alt="">
+            <img class="event-image" src="images/gallery/image (8).jpg" alt="">
             <!--
             <p class="still-in-devpmt"> 
                 ⚠️Section still under development!⚒️
             </p> -->
         </div>
-        
+        <div class="show-more">
+            <button class="show-more-btn" onclick="showMore()">Show More</button>
+        </div>
+        <!-- Modal for the gallery images -->
+        <div class="modal" id="galleryModal" onclick="closeGalleryModal()">
+            <span class="close-modal" onclick="closeGalleryModal()">&#10006;</span>
+            <img class="modal-content" id="galleryModalImage" onclick="event.stopPropagation()">
+        </div>
     </div>
 </section>
 <!-- End of Gallery Section -->
@@ -589,7 +602,7 @@
                             <img class="socials" src="images/university.png" alt="University" width="30px" height="auto">Our Home
                             <br>
                         </a>
-                        You can also visit our university website below. <code><a href="https://msuas.ac.zw/">https://msuas.ac.zw/</a></code> <br>
+                        You can also visit our university website below. <code><a href="https://msuas.ac.zw/">https://msuas.ac.zw/</a></code>
                         <a href="https://msuas.ac.zw/" ><button class="univ-contact-btn">Visit Site</button></a>
                     </div>
                 </div>

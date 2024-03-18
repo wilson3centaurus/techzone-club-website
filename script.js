@@ -27,84 +27,51 @@ function nextImage() {
 
 setInterval(changeBackground, 6000);
 
+// Gallery modal
+const galleryModal = document.getElementById('galleryModal');
+const galleryModalImg = document.getElementById('galleryModalImage');
 
+function closeGalleryModal() {
+    galleryModal.style.display = 'none';
+}
 
-// JavaScript to open and close the modal
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImage');
-const images = document.querySelectorAll('.gallery-image');
-
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImg.src = img.src;
+// Open the gallery modal when clicking on a gallery image
+document.querySelectorAll('.gallery-image').forEach(image => {
+    image.addEventListener('click', function() {
+        galleryModal.style.display = 'flex';
+        galleryModalImg.src = this.src;
     });
 });
 
-function closeModal() {
-    modal.style.display = 'none';
-}
+// Close the gallery modal when clicking on the close button or outside the modal
+window.onclick = function(event) {
+    if (event.target === galleryModal) {
+        closeGalleryModal();
+    }
+};
 
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            closeModal();
-        }
-    };
-
-// JavaScript to open and close the modal for events
+// Event modal
 const eventModal = document.getElementById('eventModal');
 const eventModalImg = document.getElementById('eventModalImage');
-
-// Add event listeners to open the modal when clicking on the event images
-// and to close the modal when clicking on the close button or outside the modal
-// (similar to how it was done for the gallery modal)
-// Update the closeModal function to handle closing the event modal
 
 function closeEventModal() {
     eventModal.style.display = 'none';
 }
 
+// Open the event modal when clicking on an event image
+document.querySelectorAll('.event-image').forEach(image => {
+    image.addEventListener('click', function() {
+        eventModal.style.display = 'flex';
+        eventModalImg.src = this.src;
+    });
+});
+
+// Close the event modal when clicking on the close button or outside the modal
 window.onclick = function(event) {
     if (event.target === eventModal) {
         closeEventModal();
     }
 };
-
-// Modals functionsality
-/*
-function openModal(imageSrc) {
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    
-    modal.style.display = 'flex';
-    modalImage.src = imageSrc;
-  }
-  
-  function closeModal() {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = 'none';
-  }
-  
-// Events Modals 
-
-const learnMoreButton = document.querySelectorAll('.reserve-button');
-learnMoreButton.forEach(button => {
-    button.addEventListener('click', (event) => {
-        const imageSrc = button.closest('.event-card').querySelector('.event-image').src;
-        openModal(imageSrc);
-        event.stopPropagation();
-    });
-});
-
-// Gallery Modals
-const galleryButton = document.querySelectorAll('.galleryModal');
-galleryButton.forEach(button => {
-    button.addEventListener('click', (event) => {
-        const imageSrc = button.closest('.gallery-container').querySelector('.gallery-image').src;
-        openModal(imageSrc);
-        event.stopPropagation();
-    });
-});  */
   
 const imageSources = [
    'images/_452360.jpg',
@@ -148,4 +115,25 @@ function prevImage2() {
 function nextImage2() {
     currentImageIndex2 = (currentImageIndex2 + 1) % slideshowImages2.length;
     changeBackground2();
+}
+
+function showMore() {
+    const showMoreBtn = document.querySelector('.show-more');
+
+    if (showMoreBtn.innerText === 'Show More') {
+        document.querySelector('#gallery').style.height = 'auto';
+        document.querySelector('.gallery-container').style.height = 'auto';
+        showMoreBtn.innerHTML = 
+        `
+            <button class="show-more-btn" onclick="showMore()">Show Less</button>
+        `;
+    } else if (showMoreBtn.innerText === 'Show Less') {
+        document.querySelector('#gallery').style.height = '100vh';
+        document.querySelector('.gallery-container').style.height = '370px';
+        showMoreBtn.innerHTML = 
+        `
+            <button class="show-more-btn" onclick="showMore()">Show More</button>
+        `;
+    }
+
 }
