@@ -1,0 +1,50 @@
+{
+  "general": {
+    "clubName": "TechZone Club",
+    "universityName": "MSUAS",
+    "clubMotto": "Explore the world of technology with us today!",
+    "joinFormLink": "https://forms.gle/HP96YjrMbTAWDTiV8",
+    "contactEmail": "techzone@msuas.ac.zw",
+    "contactPhone": "+263 77 123 4567",
+    "meetingTime": "Wednesdays 2:00 PM - 4:00 PM",
+    "location": "MSUAS Campus, Mutare",
+    "logoPath": "images/msuas.png"
+  },
+  "about": {
+    "paragraph1": "TechZone Club is dedicated to fostering a passionate community of technology enthusiasts, innovators, and learners.",
+    "paragraph2": "With scores of students joining MSUAS every year, TechZone Club aims to organize events that encourage students to connect and socialize.",
+    "paragraph3": "In addition to our weekly meetups, we organize a variety of events throughout the semester.",
+    "handbookLink": "https://drive.google.com/file/d/10q5kd1RJstqfrk_HNbf3q0yScRzaGrOE/view?usp=sharing"
+  },
+  "events": [],
+  "projects": [],
+  "team": [
+    {
+      "id": 1761683001436,
+      "name": "Wilson Centaurus",
+      "role": "Projects",
+      "image": "images/team/wilson.jpg",
+      "twitter": "https://twitter.com/WilsonCentaurus",
+      "github": "https://github.com/wilson3centaurus",
+      "linkedin": "https://twitter.com/WilsonCentaurus"
+    }
+  ],
+  "awards": [],
+  "sponsors": [],
+  "gallery": [],
+  "socialMedia": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#",
+    "youtube": "#",
+    "whatsapp": "#",
+    "github": "#",
+    "linkedin": "#"
+  },
+  "theme": {
+    "primary": "#470404",
+    "secondary": "#e53e3e",
+    "accent": "#2d3748",
+    "lightBg": "#fff0f0"
+  }
+}

@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSUAS TechZone Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #8B1538;
+            --primary-dark: #6B0F2A;
+            --primary-light: #C81E4D;
+            --secondary: #1F2937;
+            --accent: #3B82F6;
+            --light-bg: #FEF2F2;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Madimi One', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #FCA5A5;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FCA5A5;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .join-btn {
+            background: var(--primary-dark);
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .join-btn:hover {
+            background: var(--primary-light);
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        #home {
+            margin-top: 70px;
+            height: calc(100vh - 70px);
+            background: linear-gradient(135deg, rgba(139, 21, 56, 0.95), rgba(31, 41, 55, 0.95)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%238B1538" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Madimi One', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.2s;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: fadeIn 1.5s;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .motto {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Madimi One', sans-serif;
+            font-size: 1.5rem;
+            animation: fadeIn 2s;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            background: linear-gradient(135deg, #FEF2F2, #FECACA);
+            padding: 3rem;
+            border-radius: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .handbook-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .handbook-link:hover {
+            background: #2563EB;
+            transform: translateY(-2px);
+        }
+
+        /* Events Section */
+        #events {
+            background: var(--secondary);
+            color: white;
+        }
+
+        #events .section-title {
+            background: var(--accent);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-details {
+            padding: 1.5rem;
+        }
+
+        .event-details h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .event-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 0.5rem;
+            color: #E5E7EB;
+        }
+
+        .info-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .event-btn {
+            background: var(--accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .event-btn:hover {
+            background: #2563EB;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: white;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-image-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .project-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            transition: transform 0.3s;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .team-members {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .member-badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Team Section */
+        #team {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 4px solid var(--accent);
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #93C5FD;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .member-socials {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .member-socials a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .member-socials a:hover {
+            color: var(--accent);
+        }
+
+        /* Gallery Section */
+        #gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-btn {
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #2563EB;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-socials a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .project-card {
+                grid-template-columns: 1fr;
+            }
+
+            .events-grid, .team-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <span class="logo-text">TechZone Club</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://forms.gle/HP96YjrMbTAWDTiV8" target="_blank" class="join-btn">Join Us!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>Welcome to TechZone Club</h1>
+            <p>Explore the world of technology with us today!</p>
+            <div class="hero-buttons">
+                <a href="#events" class="btn btn-primary">Upcoming Events</a>
+                <a href="https://forms.gle/HP96YjrMbTAWDTiV8" target="_blank" class="btn btn-secondary">Join Club</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="motto">🎉 Where Algorithms Dance and Gadgets Throw a Party! 🤖</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">About Us</h2>
+        </div>
+        <div class="about-content">
+            <p>At TechZone Club, we are dedicated to fostering a passionate community of technology enthusiasts, innovators, and learners. Our club serves as a hub for individuals who share a common interest in exploring and embracing the ever-evolving world of technology.</p>
+            
+            <p>With scores of students joining MSUAS every year, TechZone Club aims to organize events that encourage students to connect and socialize, to boost technical and academic interest through workshops and events, and to provide a safe environment for academic learning and growth.</p>
+            
+            <p>In addition to our weekly meetups (venue to be announced in our WhatsApp group), we organize a variety of events throughout the semester. Our primary focus lies in tech innovation projects, including software development, IoT, and various other domains. We host seminars, tech events, participate in local and national events such as hackathons and the Presidential Innovation Fair.</p>
+            
+            <a href="https://drive.google.com/file/d/10q5kd1RJstqfrk_HNbf3q0yScRzaGrOE/view?usp=sharing" target="_blank" class="handbook-link">
+                <i class="fas fa-book"></i> Download Club Handbook
+            </a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="section-header">
+            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-subtitle">Join us at our upcoming events where inspiration meets innovation!</p>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-details">
+                    <h3>Introduction to Python</h3>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>November 15, 2024</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>MSUAS Campus, Lecture Room 2</span>
+                        </div>
+                    </div>
+                    <button class="event-btn">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <div class="event-details">
+                    <h3>Web Development Workshop</h3>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>January 20, 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>MSUAS Campus, Lecture Room 5</span>
+                        </div>
+                    </div>
+                    <button class="event-btn">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <div class="event-details">
+                    <h3>Linux Fundamentals</h3>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>March 28, 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>MSUAS Campus, Lab 1</span>
+                        </div>
+                    </div>
+                    <button class="event-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <h2 class="section-title">Club Projects</h2>
+            <p class="section-subtitle">Innovation in action - explore our latest projects</p>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-image-container">
+                <div style="width: 100%; height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-car"></i>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3 class="project-title">Automated Toll Gate System</h3>
+                <div>
+                    <strong style="color: #3B82F6;">Made with:</strong>
+                    <div class="tech-stack">
+                        <i class="fab fa-js-square tech-icon" style="color: #F7DF1E;"></i>
+                        <i class="fab fa-node-js tech-icon" style="color: #339933;"></i>
+                        <i class="fas fa-database tech-icon" style="color: #4479A1;"></i>
+                    </div>
+                </div>
+                <div>
+                    <strong style="color: #3B82F6;">Team Members:</strong>
+                    <div class="team-members">
+                        <span class="member-badge">Roselyne</span>
+                        <span class="member-badge">Wilson</span>
+                        <span class="member-badge">Leilani</span>
+                        <span class="member-badge">Evido</span>
+                    </div>
+                </div>
+                <p>An innovative IoT-based toll collection system that automates vehicle identification and payment processing, reducing congestion and improving efficiency at toll plazas.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class="fas fa-globe"></i> Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-youtube"></i> Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="section-header">
+            <h2 class="section-title">Executive Board</h2>
+            <p class="section-subtitle">Meet our amazing team!</p>
+        </div>
+        <div class="team-grid">
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Mrs. Ruvinga</h3>
+                <p class="member-role">Club Patron</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Wilson Sedze</h3>
+                <p class="member-role">Projects Director</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Blessing Madamomber</h3>
+                <p class="member-role">Finance Director</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Elvis Chikudzah</h3>
+                <p class="member-role">Public Relations Officer</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Emmanuel Manzini</h3>
+                <p class="member-role">Events Coordinator</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-header">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Capturing our memorable moments</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-trophy"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Feel free to reach out to us!</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>Shoot us an email anytime</p>
+                <code>techzone@msuas.ac.zw</code>
+                <br>
+                <a href="mailto:techzone@msuas.ac.zw">
+                    <button class="contact-btn">Email Us</button>
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3>GitHub</h3>
+                <p>Check out all our repositories</p>
+                <a href="https://github.com/techzone-club/website" target="_blank" style="color: #93C5FD;">View our projects</a>
+                <br>
+                <a href="#">
+                    <button class="contact-btn">Visit GitHub</button>
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Most convenient way to stay updated</p>
+                <a href="#">
+                    <button class="contact-btn">Join Group</button>
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Location</h3>
+                <p>Manicaland State University of Applied Sciences, Mutare</p>
+                <a href="#">
+                    <button class="contact-btn">View on Map</button>
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+                <p>Call us for more information</p>
+                <code>+263 787209882</code>
+                <br>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>Our University</h3>
+                <p>Visit our university website</p>
+                <a href="https://msuas.ac.zw/" target="_blank">
+                    <button class="contact-btn">Visit Site</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 TechZone Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Gallery image click functionality
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Add your modal functionality here
+                console.log('Gallery item clicked');
+            });
+        });
+    </script>
+</body>
+</html> class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Ayanda Magatsi</h3>
+                <p class="member-role">President</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Panashe Nhaitai</h3>
+                <p class="member-role">Vice President</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="member-card">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #3B82F6;"></div>
+                <h3 class="member-name">Rejoice Crofati</h3>
+                <p class="member-role">Secretary General</p>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i
+                        
