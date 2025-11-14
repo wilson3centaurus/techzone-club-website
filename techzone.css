@@ -405,10 +405,7 @@ ul {
     transition: var(--transition);
 }
 
-.event-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 .event-image {
     height: 200px;
@@ -479,10 +476,7 @@ ul {
     border: 1px solid rgba(209, 209, 209, 0.555);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 .project-image {
     height: 200px;
@@ -587,10 +581,7 @@ ul {
     transition: var(--transition);
 }
 
-.team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 .member-image {
     overflow: hidden;
@@ -749,10 +740,7 @@ ul {
     transition: var(--transition);
 }
 
-.award-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 .award-image {
     height: 200px;
@@ -823,10 +811,7 @@ ul {
     
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 .product-image {
     overflow: hidden;
@@ -915,10 +900,7 @@ ul {
     transition: var(--transition);
 }
 
-.resource-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 .resource-icon {
     height: 100px;
