@@ -1,3 +1,124 @@
+// Gallery System
+const galleryImages = [
+    'images/gallery/image (1).jpg',
+    'images/gallery/image (2).jpg',
+    'images/gallery/image (3).jpg',
+    'images/gallery/image (4).jpg',
+    'images/gallery/image (5).jpg',
+    'images/gallery/image (6).jpg',
+    'images/gallery/image (7).jpg',
+    'images/gallery/image (8).jpg',
+    'images/gallery/image (9).jpg',
+    'images/gallery/image (10).jpg',
+    'images/gallery/image (11).jpg',
+    'images/gallery/image (12).jpg',
+    'images/gallery/image (13).jpg',
+    'images/gallery/image (14).jpg',
+    'images/gallery/image (15).jpg',
+    'images/gallery/image (16).jpg',
+    'images/gallery/image (17).jpg',
+    'images/gallery/image (18).jpg',
+    'images/gallery/image (19).jpg',
+    '/images/gallery/image (20).jpg',
+    '/images/gallery/image (21).jpg',
+    '/images/gallery/image (22).jpg',
+    '/images/gallery/image (23).jpg',
+    '/images/gallery/image (24).jpg',
+    '/images/gallery/image (25).jpg',
+    '/images/gallery/image (26).jpg',
+    '/images/gallery/image (27).jpg',
+    '/images/gallery/image (29).jpg',
+    '/images/gallery/image (30).jpg',
+    '/images/gallery/image (31).jpg'
+];
+
+let visibleImages = 8;
+const galleryGrid = document.getElementById('galleryGrid');
+const showMoreBtn = document.getElementById('showMoreBtn');
+const showLessBtn = document.getElementById('showLessBtn');
+const modal = document.getElementById('galleryModal');
+const modalImg = document.getElementById('modalImage');
+const closeModal = document.querySelector('.modal-close');
+
+// Render gallery images
+function renderGallery(count) {
+    galleryGrid.innerHTML = '';
+    const imagesToShow = galleryImages.slice(0, count);
+    
+    imagesToShow.forEach((src, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `
+            <img src="${src}" alt="Gallery Image ${index + 1}">
+            <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+            </div>
+        `;
+        
+        // Add click event to open modal
+        galleryItem.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImg.src = src;
+        });
+        
+        galleryGrid.appendChild(galleryItem);
+    });
+    
+    updateButtons(count);
+}
+
+// Update button visibility
+function updateButtons(count) {
+    if (count >= galleryImages.length) {
+        showMoreBtn.style.display = 'none';
+    } else {
+        showMoreBtn.style.display = 'inline-block';
+    }
+    
+    if (count > 8) {
+        showLessBtn.style.display = 'inline-block';
+    } else {
+        showLessBtn.style.display = 'none';
+    }
+}
+
+// Show more images
+showMoreBtn.addEventListener('click', () => {
+    visibleImages += 8;
+    renderGallery(visibleImages);
+});
+
+// Show less images
+showLessBtn.addEventListener('click', () => {
+    visibleImages = 8;
+    renderGallery(visibleImages);
+    // Scroll to gallery section
+    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Close modal
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking outside image
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+        modal.style.display = 'none';
+    }
+});
+
+// Initialize gallery with 8 images
+renderGallery(visibleImages);
+
+
 // Mobile Menu Toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
