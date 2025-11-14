@@ -15,15 +15,19 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Quicksand, Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--msuas-text);
     background-color: var(--msuas-light);
     overflow-x: hidden;
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -43,6 +47,7 @@ ul {
 
 .section {
     padding: 80px 0;
+    
 }
 
 .section-title {
@@ -51,6 +56,7 @@ ul {
 }
 
 .section-title h2 {
+    font-family: "Stack Sans Notch", sans-serif;
     font-size: 2.5rem;
     color: var(--msuas-primary);
     margin-bottom: 15px;
@@ -302,18 +308,20 @@ ul {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     z-index: 1;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: 4rem;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero p {
+    font-family: "Stack Sans Notch", sans-serif;
     font-size: 1.2rem;
     margin-bottom: 30px;
     opacity: 0.9;
