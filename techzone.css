@@ -29,6 +29,7 @@ body {
 
 
 
+
 a {
     text-decoration: none;
     color: inherit;
@@ -374,6 +375,9 @@ ul {
 
 .about-text {
     flex: 1;
+    text-align: justify;
+    text-justify: inter-word;
+    
 }
 
 .about-text p {
@@ -927,6 +931,7 @@ ul {
 
 .resource-content {
     padding: 20px;
+    font-family: Quicksand, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .resource-content h3 {
@@ -936,6 +941,7 @@ ul {
 }
 
 .resource-content p {
+    font-family: Quicksand, Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 15px;
     color: var(--msuas-text-light);
 }
