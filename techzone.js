@@ -1,3 +1,8 @@
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    alert('For the best experience, please view this site in Desktop Mode. \n\nOn Chrome: Tap menu (⋮) → Check "Desktop site"');
+}
+
 // Gallery System
 const galleryImages = [
     'images/gallery/image (1).jpg',

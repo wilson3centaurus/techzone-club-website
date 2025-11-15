@@ -1269,3 +1269,534 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ====== Enhanced Responsive Design ====== */
+
+/* Tablets and below (992px) */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+
+    /* Header adjustments */
+    .logo {
+        margin-left: 0;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .nav-menu {
+        margin-right: 0;
+    }
+
+    .sourceme {
+        display: none;
+    }
+
+    /* Hero section */
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* About section */
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+
+    /* Section titles */
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Grid adjustments */
+    .events-grid,
+    .projects-grid,
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .store-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .store .container {
+        margin-top: 80px;
+    }
+
+
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Mobile devices (768px) */
+@media (max-width: 768px) {
+    /* Header mobile menu */
+    .mobile-menu-btn {
+        display: block;
+        margin-right: 20;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--msuas-white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        transition: var(--transition);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin-right: 0;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .nav-cta {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Logo adjustments */
+    .logo img {
+        height: 90px;
+        margin-left: -150px;
+    }
+
+    /* Hero section */
+    .hero {
+        margin-top: 60px;
+        height: auto;
+        min-height: 70vh;
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Section padding */
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Section titles */
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .section-title p {
+        font-size: 0.95rem;
+    }
+
+    /* Wavy divider */
+    .wavy-divider {
+        height: 80px;
+    }
+
+    /* About section */
+    .about-text {
+        text-align: left;
+    }
+
+    /* Keep horizontal layouts but adjust size */
+    .events-grid,
+    .projects-grid,
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .store-grid,
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    /* Event cards */
+    .event-meta {
+        flex-wrap: wrap;
+        gap: 5px;
+        font-size: 0.85rem;
+    }
+
+    .event-date,
+    .event-location {
+        margin-right: 8px;
+    }
+
+    .event-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .event-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Project cards */
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-actions .btn {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Team member images */
+    .member-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Store - Coming Soon badge */
+    .coming-soon {
+        position: absolute;
+        top: 390px;
+        right: 70px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;  
+        z-index: 1000;
+        transition: var(--transition);
+    }
+
+    .product-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-item {
+        height: 150px;
+    }
+
+    /* Gallery modal */
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    /* Sponsors */
+    .sponsors-grid {
+        gap: 30px;
+    }
+
+    .sponsor-logo {
+        height: 120px;
+    }
+
+    .sponsor-logo img {
+        max-width: 150px;
+    }
+
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Small mobile devices (576px) */
+@media (max-width: 576px) {
+    /* Container */
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    /* Header */
+    #main-header {
+        padding: 10px 0;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .mobile-menu-btn {
+        font-size: 28px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    /* Sections */
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title h2::after {
+        width: 60px;
+    }
+
+    /* Cards */
+    .event-card,
+    .project-card,
+    .team-member,
+    .award-card,
+    .product-card,
+    .resource-card {
+        margin-bottom: 20px;
+    }
+
+    /* Event meta */
+    .event-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Gallery single column on very small screens */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+    /* Contact cards */
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-bottom: 10px;
+    }
+
+    /* Form controls */
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* Sponsor logos */
+    .sponsor-logo {
+        height: 100px;
+    }
+
+    .sponsor-logo img {
+        max-width: 120px;
+    }
+
+    /* Product images */
+    .product-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* Resource cards */
+    .resource-icon {
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    /* Buttons full width on small screens */
+    .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-btns .btn {
+        max-width: 100%;
+    }
+
+    /* Project tech icons */
+    .project-tech {
+        bottom: 5px;
+        left: 5px;
+    }
+
+    .tech-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Extra small devices (425px) */
+@media (max-width: 425px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .event-image,
+    .project-image,
+    .award-image {
+        height: 180px;
+    }
+
+    .product-image img {
+        height: 250px;
+    }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+    }
+
+    .nav-menu {
+        padding-top: 20px;
+    }
+
+    .nav-menu li {
+        margin: 8px 0;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase tap targets */
+    .btn {
+        padding: 14px 30px;
+    }
+
+    .nav-menu a {
+        padding: 10px 15px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .event-card:hover,
+    .project-card:hover,
+    .team-member:hover,
+    .award-card:hover,
+    .product-card:hover {
+        transform: none;
+    }
+
+    /* Keep image zoom effects but remove card transforms */
+    .event-card:active,
+    .project-card:active,
+    .team-member:active {
+        opacity: 0.9;
+    }
+}
