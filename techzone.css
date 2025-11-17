@@ -649,6 +649,148 @@ ul {
     color: var(--msuas-white);
 }
 
+/* Leadership Messages Styles */
+
+
+.messages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.message-card {
+    background-color: var(--msuas-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 1px solid rgba(209, 209, 209, 0.3);
+}
+
+.message-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.message-header {
+    background: linear-gradient(135deg, var(--msuas-primary) 0%, var(--msuas-secondary) 100%);
+    padding: 30px;
+    text-align: center;
+    color: var(--msuas-white);
+}
+
+.dignitary-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dignitary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dignitary-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dignitary-title {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.message-content {
+    padding: 30px;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--msuas-secondary);
+    opacity: 0.3;
+    margin-bottom: 15px;
+}
+
+.message-text {
+    color: var(--msuas-text-light);
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--msuas-secondary);
+}
+
+.message-text p {
+    margin-bottom: 15px;
+}
+
+.message-signature {
+    margin-top: 20px;
+    text-align: right;
+    font-style: italic;
+    color: var(--msuas-primary);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .messages-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .dignitary-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .dignitary-name {
+        font-size: 1.3rem;
+    }
+
+    .message-content {
+        padding: 20px;
+    }
+
+    .message-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .messages-container {
+        grid-template-columns: 1fr;
+    }
+
+    .message-header {
+        padding: 20px;
+    }
+
+    .dignitary-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 /* ====== Gallery Section ====== */
 .gallery {
     background-color: var(--msuas-white);
