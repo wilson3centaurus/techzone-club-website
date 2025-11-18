@@ -557,6 +557,211 @@ ul {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* About Section */
+.about {
+    background-color: var(--msuas-white);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--msuas-text-light);
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.download-btn:hover {
+    background-color: #fac9c9;
+    color: #470404;
+}
+
+/* Chairperson Message */
+.chairperson-message {
+    margin-top: 60px;
+    background: linear-gradient(135deg, rgba(71, 4, 4, 0.03) 0%, rgba(229, 62, 62, 0.03) 100%);
+    border-radius: 15px;
+    padding: 40px;
+    border: 1px solid rgba(71, 4, 4, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.chairperson-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #fac9c9;
+}
+
+.chairperson-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.chairperson-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--msuas-secondary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.chairperson-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chairperson-info h3 {
+    font-size: 1.5rem;
+    color: var(--msuas-primary);
+    margin-bottom: 5px;
+}
+
+.chairperson-info .title {
+    color: var(--msuas-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.chairperson-info .department {
+    color: var(--msuas-text-light);
+    font-size: 0.9rem;
+}
+
+.message-quote {
+    position: relative;
+    padding-left: 30px;
+}
+
+.message-quote::before {
+    content: '\f10d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: var(--msuas-secondary);
+    opacity: 0.3;
+}
+
+.message-quote p {
+    color: var(--msuas-text);
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.message-signature {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--msuas-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+
+    .chairperson-message {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .chairperson-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chairperson-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .chairperson-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .message-quote {
+        padding-left: 20px;
+    }
+
+    .message-quote p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-text {
+        text-align: left;
+    }
+
+    .chairperson-message {
+        padding: 20px;
+    }
+
+    .chairperson-photo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .chairperson-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .message-signature {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
 .member img {
     width: 100%;
     height: 100%;
@@ -703,9 +908,16 @@ ul {
 }
 
 .dignitary-title {
-    font-size: 1rem;
+    font-size: 20px;
     opacity: 0.9;
     font-weight: 500;
+}
+
+.university {
+    font-size: 15px;
+    opacity: 0.5;
+    font-weight: 500;
+
 }
 
 .message-content {
